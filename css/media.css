@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    .clock{
+        width: 80vw;
+        height: 80vw;
+    }
+    .time{
+        font-size: 6vw;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 768px){
+    .clock{
+        width: 80vh;
+        height: 80vh;
+    }
+    .time{
+        font-size: 6vh;
+    }
+}
+
+@media (max-width: 320px){
+    .clock{
+        width: 70vw;
+        height: 70vw;
+    }
+}
+@media (orientation: landscape) and (max-width: 320px){
+    .clock{
+        width: 70vh;
+        height: 70vh;
+    }
+}

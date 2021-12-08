@@ -1,0 +1,132 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    width: 80vh;
+    height: 80vh;
+    border: 1vw solid black;
+    border-radius: 100%;
+    position: relative;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.logo{
+    position: absolute;
+    top:25%;
+    left: 60%;
+    width: 12.5%;
+    display: block;
+    z-index: 0;
+    animation: logoMove infinite linear 2s;
+}
+.title{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    width: 25%;
+    z-index: 0;
+}
+.clock_active div{
+    display: block;
+}
+.hour, .min, .sec{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    border-radius: 100px;
+    transform-origin:50% 80%;
+    display: none;
+}
+.hour{
+    width: 2.8%;
+    height: 40%;
+    background-color: #662d8f;
+    animation: goHour 43200s linear infinite;
+}
+.min{
+    width: 1.8%;
+    height: 45%;
+    background-color: #489ee0;
+    animation: goMin 3600s linear infinite;
+}
+.sec{
+    width: 0.8%;
+    height: 50%;
+    background-color: #ff9d00;
+    animation: goSecond 60s linear infinite;
+}
+.contre{
+    width: 4%;
+    height: 4%;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.time{
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3vw;
+    color: #662d8f;
+    font-family: 'Russo One', sans-serif;
+}
+footer{
+    position: fixed;
+    width: 100vw;
+    bottom:0;
+    background-color: darkgray;
+    text-align: center;
+    padding: 10px 8px;
+}
+@keyframes goSecond{
+    0%{
+        transform: translate(-50%, 20%) rotate(var(--secondPositionStart));
+    }
+    100%{
+        transform: translate(-50%, 20%) rotate(var(--secondPositionEnd));
+    }
+}
+@keyframes goMin{
+    0%{
+        transform: translate(-50%, 20%) rotate(var(--minPositionStart));
+    }
+    100%{
+        transform: translate(-50%, 20%) rotate(var(--minPositionEnd));
+    }
+}
+@keyframes goHour{
+    0%{
+        transform: translate(-50%, 20%) rotate(var(--hourPositionStart));
+    }
+    100%{
+        transform: translate(-50%, 20%) rotate(var(--hourPositionEnd));
+    }
+}
+@keyframes logoMove{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
