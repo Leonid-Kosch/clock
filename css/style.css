@@ -43,6 +43,7 @@ body{
     border-radius: 100px;
     transform-origin:50% 80%;
     display: none;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.733);
 }
 .hour{
     width: 2.8%;
